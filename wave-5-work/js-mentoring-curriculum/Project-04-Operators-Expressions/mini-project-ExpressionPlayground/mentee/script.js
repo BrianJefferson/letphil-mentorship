@@ -41,3 +41,66 @@ STEP 4 — Render
 STEP 5 — Handler
   When runBtn is clicked, read a and b, compute, and render.
 */
+
+
+const a = document.getElementById("aInput");
+const b = document.getElementById("bInput");
+const runBtn = document.getElementById("runBtn");
+const resultList = document.getElementById("resultList");
+
+
+const readNumber = (inputValue) => { 
+  return Number(inputValue.value)  
+};
+
+
+const computeAll = (a,b) => {
+    return {   
+      sum: a + b,
+      diff: a - b,
+      prod: a * b,
+      quot: a / b,
+      mod: a % b,
+      eqLoose: a == b,
+      eqStrict: a === b,
+      greater: a > b,
+      bothEven: a % 2 === 0 && b % 2 === 0,
+      anyOver10: a > 10 || b > 10,
+      notEqual: a !== b,
+      precOne: a + b * 2,
+      precTwo: (a + b) * 2
+    };
+};
+
+const renderResults = (results) => { 
+  resultList.innerHTML = "";  
+
+  const keys = [
+    "sum", "diff", "prod", "quot", "mod", 
+    "eqLoose", "eqStrict", "greater",
+    "bothEven", "anyOver10", "notEqual",
+    "precOne", "precTwo"
+  ];
+  
+  keys.forEach(key => { 
+    const li = document.createElement("li"); 
+    li.textContent = key + ": " + results[key];   
+    resultList.appendChild(li); 
+  });
+};
+
+runBtn.addEventListener("click", () => { 
+
+      const numA = readNumber(a);
+      const numB = readNumber(b);
+      const results = computeAll(numA, numB);
+
+      renderResults(results);   
+});
+
+
+
+
+
+
+
