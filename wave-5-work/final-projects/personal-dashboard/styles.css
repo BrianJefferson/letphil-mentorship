@@ -60,6 +60,18 @@ body {
     text-decoration: none;
 }
 
+.logo {
+    width: 200px;
+    border: 1px solid black;   
+    border-radius: 15px;   
+    box-shadow: 5px 5px 10px gray;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 1vh;
+}
+
 
 .primary-nav {
     display: flex;
@@ -72,6 +84,10 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
+    /* border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px gray;
+    padding: 1vh; */
 }
 
 .primary-nav a:hover {color: #111827;}
@@ -97,6 +113,11 @@ body {
     box-shadow: 0 1px 0 rgba(16, 24, 40, .05);
 }
 
+.btn:hover {
+background-color: rgb(111, 163, 241);
+box-shadow: 5px 5px 10px gray;
+}
+
 .btn-outline {
     border-color: var(--border);
     color: #222;
@@ -104,13 +125,13 @@ body {
 }
 
 .btn-outline:hover {
-    border-color: #d0d4db;
+    border-color: #3c6cc0;
     transform: translateY(-1px);
 }
 
 .btn-filled {
     background: var(--brand);
-    color: #fff;
+    color: #ffffff;
     box-shadow: 0 6px 18px var(--ring);
 }
 
