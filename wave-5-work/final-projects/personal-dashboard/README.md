@@ -11,6 +11,6 @@
 ### ✅ Responsive design
 
 
-#### Will be adding react to the dashboard as well.
+#### Will be adding react to my website.
 
 
